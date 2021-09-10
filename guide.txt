@@ -1,0 +1,26 @@
+npx @umijs/create-umi-ap
+└── pages
+    ├── 404.tsx
+(page not found,default)    
+
+
+--src/wrappers/auth,
+(private route)
+{ path: '/user', component: 'user',
+      wrappers: [
+        '@/wrappers/auth',
+      ],
+    }
+
+--
+
+
+--src/global.css 
+(apply all file,global)
+
+
+helmet đè thẻ chứ không đè thuọc tính nếu config title thì nó sẽ đè tát cả,giống th cha
+
+phải bất ssr lên ms xài dc getInitialProps
+
+tên component hay path viết hoá hay thuong đều được component nôi dung là đường dẫn đên file đó,chứ không phải tên component
